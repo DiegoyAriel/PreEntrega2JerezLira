@@ -43,3 +43,44 @@
     color:black;
 }
 /* footer */
+footer{
+    height: 70px;
+    background-color: black;
+    color:white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+footer div{
+    display: flex;
+}
+footer p{
+    margin: 0;
+    font-size: 14px;
+}
+footer img{
+    height: 80%;
+}
+/* main general */
+.wp{
+    background-color: black;
+    padding: 20px 0px 20px 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: white;
+    margin-left: 40px;
+}
+.wp img{
+    height: 80;
+}
+
+
+/* Media Queries*/
+@media (max-width:480px)
+{
+    footer div{
+        flex-direction: column;
+        align-items: center;
+        
+    }
+}
