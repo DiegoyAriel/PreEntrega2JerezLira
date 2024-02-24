@@ -1,0 +1,45 @@
+/*General*/
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+/*Header*/
+.pages{
+    justify-content: space-around;
+    width: 100%;
+}
+.header{
+    background-color: black;
+    opacity: 0.8;
+    position: fixed;
+    top: 0;
+    color: white;
+}
+.page{
+    color: white;
+    padding: 26px;
+    text-decoration: none;
+    font-weight: lighter;
+}
+.page:hover{
+    background-color: white;
+    color:black;
+}
+.current{
+    font-weight: bolder;
+    font-size: 18px;
+}
+.logo{
+    font-family: "Sacramento", sans-serif;
+    color:white;
+    margin-left: 15px;
+    font-size: 40px;
+    transform: rotate(-2deg);
+}
+.logo:hover{
+    background-color: white;
+    color:black;
+}
+/* footer */
