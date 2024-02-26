@@ -1,19 +1,21 @@
 /*General*/
-*{
+* {
     margin: 0;
     padding: 0;
     font-family: "Poppins", sans-serif;
 }
 
 /*Header*/
-.pages{
+.pages {
     justify-content: space-around;
     width: 100%;
 }
-.navbar{
-    --bs-navbar-padding-y:unset;
+
+.navbar {
+    --bs-navbar-padding-y: unset;
 }
-.header{
+
+.header {
     background-color: black;
     opacity: 0.8;
     position: fixed;
@@ -21,52 +23,77 @@
     color: white;
     z-index: 100000000000;
 }
-.page{
+
+.page {
     color: white;
     padding: 26px;
     text-decoration: none;
     font-weight: lighter;
 }
-.page:hover{
+
+.page:hover {
     background-color: white;
-    color:black;
+    color: black;
 }
-.current{
+
+.current {
     font-weight: bolder;
     font-size: 18px;
 }
-.logo{
+
+.logo {
     font-family: "Sacramento", sans-serif;
-    color:white;
+    color: white;
     margin-left: 15px;
     font-size: 40px;
+    font-weight: lighter;
     transform: rotate(-2deg);
+    display: none;
 }
-.logo:hover{
+
+.inicio {
+    font-family: "Sacramento", sans-serif;
+    color: white;
+    margin-left: 15px;
+    font-weight: lighter;
+    font-size: 40px;
+}
+
+.inicio:hover {
     background-color: white;
-    color:black;
+    color: black;
 }
+
+.logo:hover {
+    background-color: white;
+    color: black;
+}
+
 /* footer */
-footer{
+footer {
     height: 70px;
     background-color: black;
-    color:white;
+    color: white;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-footer div{
+
+footer div {
     display: flex;
 }
-footer p{
+
+footer p {
     margin: 0;
     font-size: 14px;
 }
-footer img{
+
+footer img {
     height: 80%;
 }
+
 /* main general */
-.wp{
+.wp {
     background-color: black;
     padding: 20px 0px 20px 20px;
     border-radius: 10px;
@@ -74,53 +101,377 @@ footer img{
     color: white;
     margin-left: 40px;
 }
-.wp img{
+
+.wp img {
     height: 80;
 }
+
 /* Portada */
-#hero{
+#hero {
     background-image: url(../images/index/hero.jpeg);
     height: 800px;
     width: 100%;
     background-size: cover;
     background-position: center;
 }
-#hero h1{
+
+#hero h1 {
     color: white;
     font-size: 70px;
     font-weight: 600;
     padding-top: 70px;
     padding-left: 20px;
 }
-#hero p{
+
+#hero p {
     color: white;
     font-size: 20px;
     font-style: italic;
     padding-left: 20px;
 }
 
+/* Servicios */
+#services {
+    display: grid;
+    grid-template-columns: 175px auto;
+    grid-template-rows: 470px auto auto auto;
+    grid-template-areas:
+        "banner banner"
+        "menu cortes"
+        "menu color"
+        "menu tratamientos";
+}
+#menuNavegacion {
+    background-color: black;
+    grid-area: menu;
+}
+.botones {
+    margin-left: 20px;
+    flex-direction: column;
+    list-style-type: none;
+    align-items: center;
+    background-color: black;
+    position: fixed;
+    padding: 10px;
+}
+.tipos-de-servicio {
+    height: 20px;
+    color: white;
+    text-decoration: none;
+}
+#banner {
+    grid-area: banner;
+}
+.portada {
+    background-image: url(../images/general/portada.png);
+    background-position: center;
+    background-size: cover;
+    height: 470px;
+
+}
+.portada h2 {
+    color: black;
+    font-size: 40px;
+    font-weight: bolder;
+    padding-top: 100px;
+    padding-left: 20px;
+    padding-bottom: 20px;
+}
+.portada p {
+    color: black;
+    font-size: 16px;
+    font-style: italic;
+    font-weight: 500;
+    padding-left: 20px;
+}
+.portada .disclaimer {
+    font-size: 14px;
+}
+#cortes{
+    background-color: black;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    padding-bottom: 40px;
+}
+#color{
+    background-color: lightpink;
+    padding-top: 40px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+}
+#tratamientos{
+    background-color: antiquewhite;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    padding-top: 50px;
+}
+#cortes .cortes{
+    color: black;
+    background-color: white;
+    padding: 10px;
+    width: 500px;
+    height: 170px;
+    margin: 40px 60px 40px 20px;
+    text-align: justify;
+    align-items: center;
+}
+.cortes p{
+    font-size: 14px;
+    margin: 0;
+}
+.cortes h4{
+    font-size: 18px;
+    font-weight:bolder;
+    font-style: italic;
+}
+.cortes img{
+    float: right;
+    height: 200px;
+    width: 180px; 
+    position: relative;
+    top: 10px;
+    left: 50px;
+}
+#color .color{
+    color: rgb(116, 4, 65);
+    background-color: #D9FFF8;
+    padding: 10px;
+    width: 500px;
+    height: 170px;
+    margin: 40px 60px 40px 20px;
+    text-align:end;
+    align-items: center;
+}
+.color p{
+    font-size: 14px;
+    margin: 0;
+}
+.color h4{
+    font-size: 18px;
+    font-style: italic;
+    font-weight: bolder;
+}
+.color img{
+    float: left;
+    height: 200px;
+    width: 180px; 
+    position: relative;
+    bottom: 70px;
+    right: 20px;
+}
+#tratamientos .tratamientos{
+    color: white;
+    background-color: black;
+    padding: 10px;
+    width: 500px;
+    height: 150px;
+    margin: 40px 60px 40px 20px;
+    text-align:end;
+    align-items: center;
+}
+.tratamientos p{
+    font-size: 14px;
+    margin: 0;
+}
+.tratamientos h4{
+    font-size: 18px;
+    font-style: italic;
+    font-weight: bolder;
+}
+.tratamientos img{
+    float: right;
+    height: 200px;
+    width: 150px; 
+    position: relative;
+    bottom: 80px;
+    left: 50px;
+}
 /* Media Queries*/
-@media (max-width:480px)
-{
-    footer div{
+@media (max-width:991px) {
+    .logo {
+        display: block;
+    }
+    .inicio {
+        display: none;
+    }
+    footer div {
         flex-direction: column;
         align-items: center;
-        
     }
-    #hero{
-        height: 670px;
+    #hero {
+        height: 680px;
     }
-    #hero h1{
+    #hero h1 {
         color: white;
         font-size: 40px;
         font-weight: 600;
         padding-top: 100px;
         padding-left: 20px;
     }
-    #hero p{
+    #hero p {
         color: white;
-        font-size: 12px;
+        font-size: 14px;
         font-style: italic;
+    }
+    #services {
+        display: grid;
+        grid-template-columns: 175px auto;
+        grid-template-rows: 470px auto auto auto;
+        grid-template-areas:
+            "banner banner"
+            "menu cortes"
+            "menu color"
+            "menu tratamientos";
+    }
+    #menuNavegacion {
+        background-color: black;
+        grid-area: menu;
+    }
+    .botones {
+        margin-left: 20px;
+        flex-direction: column;
+        list-style-type: none;
+        align-items: center;
+        background-color: black;
+        position: fixed;
+        padding: 10px;
+    }
+    .tipos-de-servicio {
+        height: 20px;
+        color: white;
+        text-decoration: none;
+    }
+    #banner {
+        grid-area: banner;
+    }
+    .portada {
+        background-image: url(../images/general/portada.png);
+        background-position: center;
+        background-size: cover;
+        height: 470px;
+    
+    }
+    .portada h2 {
+        color: black;
+        font-size: 40px;
+        font-weight: bolder;
+        padding-top: 100px;
         padding-left: 20px;
+        padding-bottom: 20px;
+    }
+    .portada p {
+        color: black;
+        font-size: 16px;
+        font-style: italic;
+        font-weight: 500;
+        padding-left: 20px;
+    }
+    .portada .disclaimer {
+        font-size: 14px;
+    }
+    #cortes{
+        background-color: black;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-evenly;
+        padding-bottom: 40px;
+    }
+    #color{
+        background-color: lightpink;
+        padding-top: 40px;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-evenly;
+    }
+    #tratamientos{
+        background-color: antiquewhite;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-evenly;
+        padding-top: 50px;
+    }
+    #cortes .cortes{
+        color: black;
+        background-color: white;
+        padding: 10px;
+        width: 500px;
+        height: 170px;
+        margin: 40px 60px 40px 20px;
+        text-align: justify;
+        align-items: center;
+    }
+    .cortes p{
+        font-size: 14px;
+        margin: 0;
+    }
+    .cortes h4{
+        font-size: 18px;
+        font-weight:bolder;
+        font-style: italic;
+    }
+    .cortes img{
+        float: right;
+        height: 200px;
+        width: 180px; 
+        position: relative;
+        top: 10px;
+        left: 50px;
+    }
+    #color .color{
+        color: rgb(116, 4, 65);
+        background-color: #D9FFF8;
+        padding: 10px;
+        width: 500px;
+        height: 170px;
+        margin: 40px 60px 40px 20px;
+        text-align:end;
+        align-items: center;
+    }
+    .color p{
+        font-size: 14px;
+        margin: 0;
+    }
+    .color h4{
+        font-size: 18px;
+        font-style: italic;
+        font-weight: bolder;
+    }
+    .color img{
+        float: left;
+        height: 200px;
+        width: 180px; 
+        position: relative;
+        bottom: 70px;
+        right: 20px;
+    }
+    #tratamientos .tratamientos{
+        color: white;
+        background-color: black;
+        padding: 10px;
+        width: 500px;
+        height: 150px;
+        margin: 40px 60px 40px 20px;
+        text-align:end;
+        align-items: center;
+    }
+    .tratamientos p{
+        font-size: 14px;
+        margin: 0;
+    }
+    .tratamientos h4{
+        font-size: 18px;
+        font-style: italic;
+        font-weight: bolder;
+    }
+    .tratamientos img{
+        float: right;
+        height: 200px;
+        width: 150px; 
+        position: relative;
+        bottom: 80px;
+        left: 50px;
     }
 }
